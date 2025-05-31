@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Sum Finder App By Yash</title>
+        <style>
+        *{background-color:gold;font-size:40px;text-align:center;}
+        body {font-family: Cambria;width:100%}
+        h1{background-color:black;color:white;width:80%;margin:auto;border-radius:20px;}
+        .b1{border-radius: 10px;background-color: pink;color:green;width: 20%; }
+        .btn{background-color:white;color:black;}
+        </style>
+    </head>
+    <body>
+        <h1>Sum Of Number App</h1><br/> 
+        <form onsubmit="find()">
+            <input type="number" step="any" id="num" placeholder="Enter The Number" class="btn"/><br/><br/>
+            <input type="submit" value="M1" class="b1"/>
+            <input type="submit" value="M2" class="b1"/>
+            <input type="submit" value="M3" class="b1"/>
+            <h2 id="msg"></h2>
+        </form>
+        <script>
+            function find()
+            {
+                event.preventDefault();
+                let num=document.getElementById("num");
+                let msg=document.getElementById("msg");
+                if(num.value==="")
+                {
+                alert("Please Enter Number");
+                msg.innerHTML="";
+                num.focus();
+                return;
+                }
+                let n=parseFloat(num.value);
+                let action=document.activeElement.value;
+                let r="";
+                if(action==="M1")
+                {
+                let i=1;sum=0;
+                while(i<=n)
+                   {
+                sum=sum+i;
+                i++;
+                   }
+                r=sum;
+                msg.innerHTML="The Sum by M1 is -> "+r;
+                }
+                else if (action==="M2")
+                {
+                   let i=1;sum=0;  
+                   do
+                    {
+                       sum=sum+i;
+                        i++;
+                    }while(i<=n);
+                    r=sum;
+                    msg.innerHTML="The Sum by M2 is -> "+r;
+               
+                }
+                else if(action==="M3")
+                {
+                    let sum=0;
+                    for(let i=1;i<=n;i++)
+                    {
+                        sum=sum+i;
+                    }
+                    r=sum;
+                    msg.innerHTML="The Sum by M3 is -> "+r;
+                }
+        }
+        </script>
+    </body>
+</html>
