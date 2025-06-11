@@ -2,11 +2,73 @@
     <head>
         <title>Sum Finder App By Yash</title>
         <style>
-        *{background-color:gold;font-size:40px;text-align:center;}
-        body {font-family: Cambria;width:100%}
-        h1{background-color:black;color:white;width:80%;margin:auto;border-radius:20px;}
-        .b1{border-radius: 10px;background-color: pink;color:green;width: 20%; }
-        .btn{background-color:white;color:black;}
+              * {
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        body {
+           background-color: pink;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin-top: 40px;
+        }
+
+        form {
+            background-color: #ffffffc9;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-top: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .b1 {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            background-color: #bd6673;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .b1:hover {
+            background-color: #ff4757;
+            cursor: pointer;
+        }
+
+        #msg {
+            margin-top: 20px;
+            color: #2f3542;
+            font-size: 22px;
+            font-weight: bold;
+        }
         </style>
     </head>
     <body>
